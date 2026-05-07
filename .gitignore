@@ -1,2 +1,16 @@
-config.json
+# Environments
+venv/
+env/
 .env
+.venv
+
+# Python artifacts
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Personal Config 
+config.yaml
