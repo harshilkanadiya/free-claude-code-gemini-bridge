@@ -1,5 +1,5 @@
 {
-  "api_key": "AIzaSyDWfpJBm_DK1uv3yZJGFqRCXiVQ7CugLSE",
+  "api_key": "YOUR_API_KEY_HERE",
   "model": "gemini-flash-lite-latest",
   "port": 8000
 }
