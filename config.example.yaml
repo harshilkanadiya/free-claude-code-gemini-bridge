@@ -1,0 +1,25 @@
+model_list:
+  - model_name: "claude-3-5-sonnet-20241022"
+    litellm_params:
+      model: "gemini/gemini-3.1-flash-lite-preview"
+      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      api_version: "v1beta"
+      drop_params: true
+  - model_name: "claude-opus-4-7"
+    litellm_params:
+      model: "gemini/gemini-3.1-flash-lite-preview"
+      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      api_version: "v1beta"
+      drop_params: true
+  - model_name: "claude-opus-4-7[1m]"
+    litellm_params:
+      model: "gemini/gemini-3.1-flash-lite-preview"
+      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      api_version: "v1beta"
+      drop_params: true
+  - model_name: "claude-haiku-4-5-20251001"
+    litellm_params:
+      model: "gemini/gemini-3.1-flash-lite-preview"
+      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      api_version: "v1beta"
+      drop_params: true
