@@ -77,17 +77,21 @@ litellm --config config.yaml --port 8000
 ```
 
 ### Terminal 2: The Claude CLI
-Export the necessary environment variables to point the CLI to your local bridge, then launch the agent:
+Set the necessary environment variables to point the CLI to your local bridge, then launch the agent:
 
+**Linux / macOS:**
 ```bash
-# Point to your local proxy
 export ANTHROPIC_BASE_URL="http://127.0.0.1:8000"
 export ANTHROPIC_API_KEY="sk-any-key"
-
-# Disable beta features that may interfere with the bridge
 export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+claude
+```
 
-# Run the CLI
+**Windows (PowerShell):**
+```powershell
+$env:ANTHROPIC_BASE_URL="http://127.0.0.1:8000"
+$env:ANTHROPIC_API_KEY="sk-any-key"
+$env:CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
 claude
 ```
 
