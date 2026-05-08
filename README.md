@@ -1,5 +1,7 @@
 # free-claude-code-gemini-bridge 🚀
 
+![Claude Code Gemini Bridge](claude%20sc.png)
+
 A high-performance, local proxy bridge designed to run the Anthropic **Claude Code CLI** entirely for free using Google's **Gemini 3.1 Flash-Lite** (1M token context window).
 
 This project is an industrial-grade evolution of the [original proof-of-concept](https://github.com/Alishahryar1/free-claude-code). While the initial inspiration laid the groundwork, this version re-architects the proxy layer to solve the stability, tool-calling, and reliability issues that plagued the original approach.
