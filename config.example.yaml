@@ -1,25 +1,60 @@
 model_list:
+  # --- CLAUDE 3.5 SONNET ROUTING ---
   - model_name: "claude-3-5-sonnet-20241022"
     litellm_params:
-      model: "gemini/gemini-3.1-flash-lite-preview"
-      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_PRIMARY_API_KEY"
+      api_version: "v1beta"
+      drop_params: true
+  - model_name: "claude-3-5-sonnet-20241022"
+    litellm_params:
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_SECONDARY_API_KEY_OR_LEAVE_BLANK"
+      api_version: "v1beta"
+      drop_params: true
+
+  # --- CLAUDE OPUS ROUTING ---
+  - model_name: "claude-opus-4-7"
+    litellm_params:
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_PRIMARY_API_KEY"
       api_version: "v1beta"
       drop_params: true
   - model_name: "claude-opus-4-7"
     litellm_params:
-      model: "gemini/gemini-3.1-flash-lite-preview"
-      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_SECONDARY_API_KEY_OR_LEAVE_BLANK"
+      api_version: "v1beta"
+      drop_params: true
+
+  # --- CLAUDE OPUS 1M ROUTING ---
+  - model_name: "claude-opus-4-7[1m]"
+    litellm_params:
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_PRIMARY_API_KEY"
       api_version: "v1beta"
       drop_params: true
   - model_name: "claude-opus-4-7[1m]"
     litellm_params:
-      model: "gemini/gemini-3.1-flash-lite-preview"
-      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_SECONDARY_API_KEY_OR_LEAVE_BLANK"
+      api_version: "v1beta"
+      drop_params: true
+
+  # --- CLAUDE HAIKU ROUTING ---
+  - model_name: "claude-haiku-4-5-20251001"
+    litellm_params:
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_PRIMARY_API_KEY"
       api_version: "v1beta"
       drop_params: true
   - model_name: "claude-haiku-4-5-20251001"
     litellm_params:
-      model: "gemini/gemini-3.1-flash-lite-preview"
-      api_key: "YOUR_GEMINI_API_KEY_HERE"
+      model: "gemini/gemini-3.5-flash"
+      api_key: "YOUR_SECONDARY_API_KEY_OR_LEAVE_BLANK"
       api_version: "v1beta"
       drop_params: true
+
+router_settings:
+  routing_strategy: usage-based-routing-v2
+  num_retries: 2
